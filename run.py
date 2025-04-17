@@ -10,6 +10,7 @@ import argparse
 import config
 from example_analysis import ExampleAnalysis
 from feature_3.top_contributors import TopContributorAnalysis
+from feature_2.timestamp_activity import TimestampActivityAnalysis
 
 def parse_args():
     """
@@ -50,7 +51,7 @@ if args.feature == 0:
 elif args.feature == 1:
     pass # TODO call first analysis
 elif args.feature == 2:
-    pass # TODO call second analysis
+    TimestampActivityAnalysis().run()
 elif args.feature == 3:
     TopContributorAnalysis().run()
 else:

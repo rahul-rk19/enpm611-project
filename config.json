@@ -1,3 +1,4 @@
 {
-    "DATA_FILE":"poetry.json"
+    "DATA_FILE":"poetry.json",
+    "ENPM611_PROJECT_DATA_PATH":"poetry.json"
 }
