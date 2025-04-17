@@ -1,7 +1,6 @@
 
 import json
 from typing import List
-
 import config
 from model import Issue
 
