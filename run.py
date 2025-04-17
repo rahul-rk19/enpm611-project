@@ -36,6 +36,12 @@ def parse_args():
     ap.add_argument('--label', '-l', type=str, required=False,
                     help='Optional parameter for analyses focusing on a specific label')
     
+    ap.add_argument('--start-date', '-s', type=str, required=False,
+                help='Start date for filtering (format: YYYY-MM-DD)')
+    
+    ap.add_argument('--end-date', '-e', type=str, required=False,
+                help='End date for filtering (format: YYYY-MM-DD)')
+    
     return ap.parse_args()
 
 
