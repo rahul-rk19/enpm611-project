@@ -57,18 +57,18 @@ This feature analyzes how frequently a specific keyword appears in GitHub issues
 1. **To generate the barchart, run the following command**:
    
     ```sh
-    python run.py --feature 1
-![Output Screen](https://drive.google.com/file/d/14Fq5KKkFcsSRRQhV-r1ZuUzI6vVjtk3L/view?usp=drive_link)
+    python run.py --feature 1 --keyword <keyword>
 
 ## Feature 2
 
 This feature visualizes when GitHub issues and events are most active throughout the day. It analyzes the hourly distribution of issue creation, updates, and related events, with optional filtering based on start and end dates from the configuration. The output consists of two side-by-side heatmaps: one for issue activity and one for event activity, both showing counts per hour in UTC. This helps reveal peak activity periods within the project’s lifecycle.
 
 1. **To generate the heatmaps, run the following command**:
+2. **You can also provide optional date filters**:
    
     ```sh
     python run.py --feature 2
-![Output Screen](https://drive.google.com/file/d/14Fq5KKkFcsSRRQhV-r1ZuUzI6vVjtk3L/view?usp=drive_link)
+    python run.py --feature 2 --start-date 2024-05-20 --end-date 2024-05-25
 
 ## Feature 3
 
@@ -78,5 +78,4 @@ Top Contributor Analysis identifies and visualizes the most active contributors 
 1. **To generate the chart, run the following command**:
    
      ```sh
-    python run.py --feature 3
-![Output Screen](https://drive.google.com/file/d/14Fq5KKkFcsSRRQhV-r1ZuUzI6vVjtk3L/view?usp=drive_link)
+    python3 run.py --feature 3
