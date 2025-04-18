@@ -62,7 +62,7 @@ if args.feature == 0:
     ExampleAnalysis().run()
 elif args.feature == 1:
     if not args.keyword:
-        print("Please enter a keyword")
+        print("Please enter a keyword argument")
     else:
         KeywordDemand(args.keyword).run()
 elif args.feature == 2:
