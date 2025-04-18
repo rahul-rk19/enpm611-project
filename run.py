@@ -10,6 +10,7 @@ import argparse
 import config
 from example_analysis import ExampleAnalysis
 from feature_3.top_contributors import TopContributorAnalysis
+from feature_1.keyword_demand import KeywordDemand
 
 def parse_args():
     """
@@ -34,6 +35,8 @@ def parse_args():
     # Optional parameter for analyses focusing on a specific label
     ap.add_argument('--label', '-l', type=str, required=False,
                     help='Optional parameter for analyses focusing on a specific label')
+    ap.add_argument('--keyword',type=str, required=False,
+                    help='Put the parameter you want facts about')
     
     return ap.parse_args()
 
@@ -48,7 +51,10 @@ config.overwrite_from_args(args)
 if args.feature == 0:
     ExampleAnalysis().run()
 elif args.feature == 1:
-    pass # TODO call first analysis
+    if not arg.keyword:
+        print("Please enter a keyword")
+    else:
+        KeywordDemand(arg.keyword).run()
 elif args.feature == 2:
     pass # TODO call second analysis
 elif args.feature == 3:
