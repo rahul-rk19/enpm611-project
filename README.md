@@ -53,15 +53,16 @@ The `.vscode/settings.json` also customizes the VSCode user interface sligthly t
 ## Feature 1
 
 1. **To run the command**:
-    '''sh
+   
+    ```sh
     python run.py --feature 1
-
 
 
 ## Feature 2
 
 1. **To run the command**:
-    '''sh
+   
+    ```sh
     python run.py --feature 2
 
 
@@ -69,7 +70,8 @@ The `.vscode/settings.json` also customizes the VSCode user interface sligthly t
 ## Feature 3
 
 1. **To run the command**:
-    '''sh
+   
+     ```sh
     python run.py --feature 3
 
 
