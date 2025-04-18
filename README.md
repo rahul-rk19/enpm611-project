@@ -68,6 +68,7 @@ This feature visualizes when GitHub issues and events are most active throughout
    
     ```sh
     python run.py --feature 2
+    ```sh
     python run.py --feature 2 --start-date 2024-05-20 --end-date 2024-05-25
 
 ## Feature 3
