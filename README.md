@@ -64,13 +64,14 @@ This feature analyzes how frequently a specific keyword appears in GitHub issues
 This feature visualizes when GitHub issues and events are most active throughout the day. It analyzes the hourly distribution of issue creation, updates, and related events, with optional filtering based on start and end dates from the configuration. The output consists of two side-by-side heatmaps: one for issue activity and one for event activity, both showing counts per hour in UTC. This helps reveal peak activity periods within the project’s lifecycle.
 
 1. **To generate the heatmaps, run the following command**:
-2. **You can also provide optional date filters**:
    
     ```sh
     python run.py --feature 2
+    
+2. **You can also provide optional date filters**:
 
-   ```sh
-    python run.py --feature 2 --start-date 2024-05-20 --end-date 2024-05-25
+    ```sh
+    python run.py --feature 2 --start-date 2024-05-20 --end-date 2024-05-25    
 
 ## Feature 3
 
