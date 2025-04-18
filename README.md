@@ -52,24 +52,31 @@ The `.vscode/settings.json` also customizes the VSCode user interface sligthly t
 
 ## Feature 1
 
-1. **To run the command**:
+This feature analyzes how frequently a specific keyword appears in GitHub issues. It searches the keyword in both issue titles and descriptions, then analyzes related labels, comment activity, and the monthly trend of mentions. The output includes a bar chart of the top 5 associated labels and a line chart showing keyword usage over time. 
+
+1. **To generate the barchart, run the following command**:
    
     ```sh
     python run.py --feature 1
-
+![Output Screen](https://drive.google.com/file/d/14Fq5KKkFcsSRRQhV-r1ZuUzI6vVjtk3L/view?usp=drive_link)
 
 ## Feature 2
 
-1. **To run the command**:
+This feature visualizes when GitHub issues and events are most active throughout the day. It analyzes the hourly distribution of issue creation, updates, and related events, with optional filtering based on start and end dates from the configuration. The output consists of two side-by-side heatmaps: one for issue activity and one for event activity, both showing counts per hour in UTC. This helps reveal peak activity periods within the project’s lifecycle.
+
+1. **To generate the heatmaps, run the following command**:
    
     ```sh
     python run.py --feature 2
-
-
+![Output Screen](https://drive.google.com/file/d/14Fq5KKkFcsSRRQhV-r1ZuUzI6vVjtk3L/view?usp=drive_link)
 
 ## Feature 3
 
-1. **To run the command**:
+Top Contributor Analysis identifies and visualizes the most active contributors in the GitHub issue dataset. It calculates a total activity score for each user based on three equally weighted actions: issue creation, commenting on issues, and closing issues. The system parses the JSON file to extract contributors from the creator field of issues and the author fields in comments and events. The top 10 contributors, ranked by their overall activity, are displayed in a bar chart with usernames on the x-axis and contribution counts on the y-axis. 
+
+
+1. **To generate the chart, run the following command**:
    
      ```sh
     python run.py --feature 3
+![Output Screen](https://drive.google.com/file/d/14Fq5KKkFcsSRRQhV-r1ZuUzI6vVjtk3L/view?usp=drive_link)
