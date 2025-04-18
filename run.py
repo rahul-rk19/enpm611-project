@@ -61,10 +61,10 @@ config.overwrite_from_args(args)
 if args.feature == 0:
     ExampleAnalysis().run()
 elif args.feature == 1:
-    if not arg.keyword:
-        print("Please enter a keyword")
+    if not args.keyword:
+        print("Please enter a keyword argument")
     else:
-        KeywordDemand(arg.keyword).run()
+        KeywordDemand(args.keyword).run()
 elif args.feature == 2:
     TimestampActivityAnalysis().run()
 elif args.feature == 3:
