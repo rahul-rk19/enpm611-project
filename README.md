@@ -73,9 +73,3 @@ The `.vscode/settings.json` also customizes the VSCode user interface sligthly t
    
      ```sh
     python run.py --feature 3
-
-
-
-
-
-
