@@ -10,7 +10,11 @@ import argparse
 import config
 from example_analysis import ExampleAnalysis
 from feature_3.top_contributors import TopContributorAnalysis
+
+from feature_2.timestamp_activity import TimestampActivityAnalysis
+
 from feature_1.keyword_demand import KeywordDemand
+
 
 def parse_args():
     """
@@ -38,6 +42,12 @@ def parse_args():
     ap.add_argument('--keyword',type=str, required=False,
                     help='Put the parameter you want facts about')
     
+    ap.add_argument('--start-date', '-s', type=str, required=False,
+                help='Start date for filtering (format: YYYY-MM-DD)')
+    
+    ap.add_argument('--end-date', '-e', type=str, required=False,
+                help='End date for filtering (format: YYYY-MM-DD)')
+    
     return ap.parse_args()
 
 
@@ -56,7 +66,7 @@ elif args.feature == 1:
     else:
         KeywordDemand(arg.keyword).run()
 elif args.feature == 2:
-    pass # TODO call second analysis
+    TimestampActivityAnalysis().run()
 elif args.feature == 3:
     TopContributorAnalysis().run()
 else:
