@@ -50,6 +50,8 @@ The `.vscode/settings.json` also customizes the VSCode user interface sligthly t
 
 # Milestone 2
 
+Modified requirements.txt file.Added Seaborn Library.
+
 ## Feature 1
 
 This feature analyzes how frequently a specific keyword appears in GitHub issues. It searches the keyword in both issue titles and descriptions, then analyzes related labels, comment activity, and the monthly trend of mentions. The output includes a bar chart of the top 5 associated labels and a line chart showing keyword usage over time. Line chart will be shown after the bar chart is closed.
