@@ -52,7 +52,7 @@ The `.vscode/settings.json` also customizes the VSCode user interface sligthly t
 
 ## Feature 1
 
-This feature analyzes how frequently a specific keyword appears in GitHub issues. It searches the keyword in both issue titles and descriptions, then analyzes related labels, comment activity, and the monthly trend of mentions. The output includes a bar chart of the top 5 associated labels and a line chart showing keyword usage over time. 
+This feature analyzes how frequently a specific keyword appears in GitHub issues. It searches the keyword in both issue titles and descriptions, then analyzes related labels, comment activity, and the monthly trend of mentions. The output includes a bar chart of the top 5 associated labels and a line chart showing keyword usage over time. Line chart will be shown after the bar chart is closed.
 
 1. **To generate the barchart, run the following command**:
    
@@ -68,7 +68,8 @@ This feature visualizes when GitHub issues and events are most active throughout
    
     ```sh
     python run.py --feature 2
-    ```sh
+
+   ```sh
     python run.py --feature 2 --start-date 2024-05-20 --end-date 2024-05-25
 
 ## Feature 3
