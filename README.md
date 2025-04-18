@@ -50,7 +50,7 @@ The `.vscode/settings.json` also customizes the VSCode user interface sligthly t
 
 # Milestone 2
 
-Modified requirements.txt file.Added Seaborn Library.
+Modified requirements.txt file. Added Seaborn Library.
 
 ## Feature 1
 
@@ -64,6 +64,7 @@ This feature analyzes how frequently a specific keyword appears in GitHub issues
 ## Feature 2
 
 This feature visualizes when GitHub issues and events are most active throughout the day. It analyzes the hourly distribution of issue creation, updates, and related events, with optional filtering based on start and end dates from the configuration. The output consists of two side-by-side heatmaps: one for issue activity and one for event activity, both showing counts per hour in UTC. This helps reveal peak activity periods within the project’s lifecycle.
+
 Note: The total issues displayed above the graph may not match the sum of the graph data, as both creation and update timestamps are considered.
 
 1. **To generate the heatmaps, run the following command**:
