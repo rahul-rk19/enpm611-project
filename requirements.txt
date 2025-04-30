@@ -1,5 +1,5 @@
 python-dateutil
 pandas
 matplotlib
-
+pytest
 seaborn

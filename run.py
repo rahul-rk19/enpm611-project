@@ -9,7 +9,7 @@ import argparse
 
 import config
 from example_analysis import ExampleAnalysis
-from feature_3.top_contributors import TopContributorAnalysis
+from feature_3.top_contributor_analysis import TopContributorAnalysis
 
 from feature_2.timestamp_activity import TimestampActivityAnalysis
 

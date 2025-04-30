@@ -1,0 +1,8 @@
+python3 -m coverage report --omit="tests/*,config.py"
+
+
+Name                                    Stmts   Miss  Cover
+-----------------------------------------------------------
+feature_3/top_contributor_analysis.py      43      2    95%
+-----------------------------------------------------------
+TOTAL                                      43      2    95%
