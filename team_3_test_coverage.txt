@@ -1,8 +1,11 @@
-python3 -m coverage report --omit="tests/*,config.py"
-
-
+PS D:\D\D\ENPM611\Project\SoftDev611_test\enpm611-project> python -m coverage report --omit="tests/*"
 Name                                    Stmts   Miss  Cover
 -----------------------------------------------------------
-feature_3/top_contributor_analysis.py      43      2    95%
+config.py                                  68     23    66%
+data_loader.py                             18      1    94%
+feature_1\keyword_demand.py                60      2    97%
+feature_2\timestamp_activity.py            83      1    99%
+feature_3\top_contributor_analysis.py      43      2    95%
+model.py                                   63      2    97%
 -----------------------------------------------------------
-TOTAL                                      43      2    95%
+TOTAL                                     335     31    91%
