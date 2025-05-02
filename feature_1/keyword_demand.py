@@ -3,13 +3,16 @@ from typing import List
 import matplotlib.pyplot as plt
 from collections import Counter
 from model import Issue
+import config
 
 class KeywordDemand():
-    def __init__(self, keyword:str):
+    def __init__(self, keyword:str = None):
         """
         Constructor that initializes the keyword to search for
         """
-        self.keyword = keyword.lower() # Stored in lowercase
+        if keyword is None:
+            keyword = config.get_parameter("keyword")
+        self.keyword = (keyword or "").lower()
 
     def run(self):
         """
@@ -17,6 +20,7 @@ class KeywordDemand():
         """
         if not self.keyword:
             print("Please input the keyword as --keyword")
+            return
 
         # Getting the issues
         issues: List[Issue] = DataLoader().get_issues()
@@ -35,6 +39,11 @@ class KeywordDemand():
         """
         Here, the labels, comments and the timelines in which the keywords appeared will be counted and plotted
         """
+
+        if not matched:
+            print(f"No issues found mentioning '{self.keyword}'")
+            return
+
         label_counts = Counter()
         monthly_counts = Counter()
         total_comments = 0
