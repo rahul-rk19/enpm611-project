@@ -114,5 +114,15 @@ class TestTimestampActivity(unittest.TestCase):
         analysis.run()
         mock_show.assert_called_once()
 
+    def test_future_timestamps_rejected(self):
+        """Test if the system accepts timestamps from the future"""
+        # Create a timestamp 10 years in the future (UTC)
+        future_date = datetime.now(tz.UTC).replace(year=datetime.now().year + 10)
+
+        analysis = TimestampActivityAnalysis()
+
+        # This should be FALSE (future dates should be rejected)
+        self.assertFalse(analysis.is_within_date_range(future_date),"Must not accept a date in the future")
+
 if __name__ == '__main__':
     unittest.main()
