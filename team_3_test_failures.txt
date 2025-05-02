@@ -1,22 +1,32 @@
-PS D:\D\D\ENPM611\Project\SoftDev611_test\enpm611-project> python -m coverage run -m unittest discover
+PS D:\UMD\ENPM611\enpm611-project> python -m coverage run -m unittest discover                        
 .. Found 2 issues mentioning 'virtualenv'
 Avg. comments per issue: 0.50
 ...... Found 1 issues mentioning 'virtualenv'
 Avg. comments per issue: 1.00
-......Loaded 6137 issues from poetry.json.
+...F...Loaded 6137 issues from poetry.json.
 .....E.
 ======================================================================
 ERROR: test_run_missing_event_types_should_count (tests.test_top_contributor_analysis.TestTopContributorAnalysis.test_run_missing_event_types_should_count)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "C:\Users\kinik\AppData\Local\Programs\Python\Python313\Lib\unittest\mock.py", line 1426, in patched
+  File "C:\Users\deadpool\AppData\Local\Programs\Python\Python313\Lib\unittest\mock.py", line 1426, in patched
     return func(*newargs, **newkeywargs)
-  File "D:\D\D\ENPM611\Project\SoftDev611_test\enpm611-project\tests\test_top_contributor_analysis.py", line 64, in test_run_missing_event_types_should_count
+  File "D:\UMD\ENPM611\enpm611-project\tests\test_top_contributor_analysis.py", line 64, in test_run_missing_event_types_should_count
     self.assertEqual(contributors["frank"], 1)
                      ~~~~~~~~~~~~^^^^^^^^^
 KeyError: 'frank'
 
+======================================================================
+FAIL: test_future_timestamps_rejected (tests.test_timestamp_activity.TestTimestampActivity.test_future_timestamps_rejected)
+Test if the system accepts timestamps from the future
 ----------------------------------------------------------------------
-Ran 21 tests in 6.242s
+Traceback (most recent call last):
+  File "D:\UMD\ENPM611\enpm611-project\tests\test_timestamp_activity.py", line 125, in test_future_timestamps_rejected
+    self.assertFalse(analysis.is_within_date_range(future_date),"Must not accept a date in the future")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false : Must not accept a date in the future
 
-FAILED (errors=1)
+----------------------------------------------------------------------
+Ran 22 tests in 7.221s
+
+FAILED (failures=1, errors=1)
