@@ -41,7 +41,7 @@ class KeywordDemand():
 
         for issue in matched:
             # Count comments
-            comment_count = len([e for e in issue.events if e.event_type == 'comment'])
+            comment_count = len([e for e in issue.events if e.event_type == 'commented'])
             total_comments += comment_count
 
             # Count labels
