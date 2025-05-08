@@ -79,7 +79,7 @@ Note: The total issues displayed above the graph may not match the sum of the gr
 
 ## Feature 3
 
-Top Contributor Analysis identifies and visualizes the most active contributors in the GitHub issue dataset. It calculates a total activity score for each user based on three equally weighted actions: issue creation, commenting on issues, and closing issues. The system parses the JSON file to extract contributors from the creator field of issues and the author fields in comments and events. The top 10 contributors, ranked by their overall activity, are displayed in a bar chart with usernames on the x-axis and contribution counts on the y-axis. 
+Top Contributor Analysis identifies and visualizes the most active contributors in the GitHub issue dataset. It calculates a total activity score for each user based on event type. The system parses the JSON file to extract contributors from the creator field of issues and the author fields in comments and events. The top 10 contributors, ranked by their overall activity, are displayed in a bar chart with usernames on the x-axis and contribution counts on the y-axis.
 
 
 1. **To generate the chart, run the following command**:
